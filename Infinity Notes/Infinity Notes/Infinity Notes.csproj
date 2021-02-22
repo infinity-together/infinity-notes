@@ -10,6 +10,26 @@
 
   <ItemGroup>
     <None Remove="add.png" />
+    <None Remove="Fonts\CascadiaCode.ttf" />
+    <None Remove="Fonts\CourierNew-Bold.ttf" />
+    <None Remove="Fonts\CourierNew-BoldItalic.ttf" />
+    <None Remove="Fonts\CourierNew-Italic.ttf" />
+    <None Remove="Fonts\CourierNew-Regular.ttf" />
+    <None Remove="Fonts\Georgia-Bold.ttf" />
+    <None Remove="Fonts\Georgia-BoldItalic.ttf" />
+    <None Remove="Fonts\Georgia-Italic.ttf" />
+    <None Remove="Fonts\Georgia-Regular.ttf" />
+    <None Remove="Fonts\Inter-Bold.ttf" />
+    <None Remove="Fonts\Inter-BoldItalic.ttf" />
+    <None Remove="Fonts\Inter-Italic.ttf" />
+    <None Remove="Fonts\Inter-Regular.ttf" />
+    <None Remove="Fonts\NotoSans-BoldItalic.ttf" />
+    <None Remove="Fonts\NotoSans-Italic.ttf" />
+    <None Remove="Fonts\NotoSans-Regular.ttf" />
+    <None Remove="Fonts\Raleway-Bold.ttf" />
+    <None Remove="Fonts\Raleway-BoldItalic.ttf" />
+    <None Remove="Fonts\Raleway-Italic.ttf" />
+    <None Remove="Fonts\Raleway-Regular.ttf" />
   </ItemGroup>
 
   <ItemGroup>
@@ -17,7 +37,69 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Source\Fonts\" />
+    <Resource Include="Fonts\CascadiaCode.ttf">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Fonts\CourierNew-Bold.ttf">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Fonts\CourierNew-BoldItalic.ttf">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Fonts\CourierNew-Italic.ttf">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Fonts\CourierNew-Regular.ttf">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Fonts\Georgia-Bold.ttf">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Fonts\Georgia-BoldItalic.ttf">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Fonts\Georgia-Italic.ttf">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Fonts\Georgia-Regular.ttf">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Fonts\Inter-Bold.ttf">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Fonts\Inter-BoldItalic.ttf">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Fonts\Inter-Italic.ttf">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Fonts\Inter-Regular.ttf">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Fonts\NotoSans-Bold.ttf">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Fonts\NotoSans-BoldItalic.ttf">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Fonts\NotoSans-Italic.ttf">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Fonts\NotoSans-Regular.ttf">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Fonts\Raleway-Bold.ttf">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Fonts\Raleway-BoldItalic.ttf">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Fonts\Raleway-Italic.ttf">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Fonts\Raleway-Regular.ttf">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
 </Project>

@@ -19,4 +19,27 @@
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Fonts\NotoSans-Bold.ttf" />
+    <Resource Include="Fonts\NotoSans-BoldItalic.ttf" />
+    <Resource Include="Fonts\NotoSans-Italic.ttf" />
+    <Resource Include="Fonts\NotoSans-Regular.ttf" />
+    <Resource Include="Fonts\CascadiaCode.ttf" />
+    <Resource Include="Fonts\CourierNew-Bold.ttf" />
+    <Resource Include="Fonts\CourierNew-BoldItalic.ttf" />
+    <Resource Include="Fonts\CourierNew-Italic.ttf" />
+    <Resource Include="Fonts\CourierNew-Regular.ttf" />
+    <Resource Include="Fonts\Georgia-Bold.ttf" />
+    <Resource Include="Fonts\Georgia-BoldItalic.ttf" />
+    <Resource Include="Fonts\Georgia-Italic.ttf" />
+    <Resource Include="Fonts\Georgia-Regular.ttf" />
+    <Resource Include="Fonts\Inter-Bold.ttf" />
+    <Resource Include="Fonts\Inter-BoldItalic.ttf" />
+    <Resource Include="Fonts\Inter-Italic.ttf" />
+    <Resource Include="Fonts\Inter-Regular.ttf" />
+    <Resource Include="Fonts\Raleway-Bold.ttf" />
+    <Resource Include="Fonts\Raleway-BoldItalic.ttf" />
+    <Resource Include="Fonts\Raleway-Italic.ttf" />
+    <Resource Include="Fonts\Inter-Regular.ttf" />
+  </ItemGroup>
 </Project>
