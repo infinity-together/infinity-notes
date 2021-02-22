@@ -6,9 +6,10 @@
         xmlns:local="clr-namespace:Infinity_Notes"
         mc:Ignorable="d"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:p="clr-namespace:Infinity_Notes.Properties"
         WindowStartupLocation="CenterScreen"
         Title="Infinity Notes"  Width="1280" Height="720">
-    <Grid x:Name="mainGrid">
+    <Grid x:Name="mainGrid" Loaded="MainWindow_Loaded">
 
         <Grid.RowDefinitions>
             <RowDefinition />
@@ -38,7 +39,7 @@
         <TextBox x:Name="searchInput" Margin="10,10,0,0" Style="{StaticResource MaterialDesignTextBox}" materialDesign:HintAssist.Hint="Search" TextWrapping="NoWrap" VerticalAlignment="Top" Height="30" FontSize="16" Grid.Column="1" HorizontalAlignment="Left" Width="200" FontFamily="{StaticResource NotoSans}"/>
 
         <Frame x:Name="mainFrame" NavigationUIVisibility="Hidden" Grid.Column="1" Grid.Row="1"/>
-        <TextBox x:Name="mainInput" Grid.Column="1" Margin="10,10,0,0" Grid.Row="1" Style="{StaticResource MaterialDesignTextBox}" AcceptsReturn="True" FontSize="14" AcceptsTab="True" AutoWordSelection="True" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" Cursor="IBeam"/>
+        <TextBox x:Name="mainInput" Grid.Column="1" Margin="10,10,0,0" Grid.Row="1" Style="{StaticResource MaterialDesignTextBox}" FontFamily="{StaticResource NotoSans}" AcceptsReturn="True" FontSize="14" AcceptsTab="True" AutoWordSelection="True" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" Cursor="IBeam"/>
 
 
             <Menu Grid.Column="1" Margin="225,10,0,0" Background="#FFFFFF" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="100">

@@ -1,15 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Infinity_Notes
 {
@@ -21,6 +11,30 @@ namespace Infinity_Notes
         public SettingsPage()
         {
             InitializeComponent();
+        }
+
+        private void SettingsPage_Loaded(object sender, RoutedEventArgs e)
+        {
+            GetSettings();
+        }
+
+        public void GetSettings()
+        {
+            textSizeSettingsInput.Text = Properties.Settings.Default.textFontSize;
+            fontsSettingsChose.SelectedIndex = Properties.Settings.Default.textFont;
+        }
+
+        public void SaveSettings()
+        {
+            Properties.Settings.Default.textFontSize = textSizeSettingsInput.Text;
+            Properties.Settings.Default.textFont = fontsSettingsChose.SelectedIndex;
+
+            Properties.Settings.Default.Save();
+        }
+
+        private void settingSaveButton_Click(object sender, RoutedEventArgs e)
+        {
+            SaveSettings();
         }
     }
 }

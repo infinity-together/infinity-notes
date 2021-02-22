@@ -1,19 +1,8 @@
 ﻿using Microsoft.Win32;
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Infinity_Notes
 {
@@ -22,6 +11,14 @@ namespace Infinity_Notes
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void MainWindow_Loaded(object sender, RoutedEventArgs e)
+        {
+            string textFontSizeString = Properties.Settings.Default.textFontSize;
+            int textFontSize = (int)Convert.ToDouble(textFontSizeString);
+
+            mainInput.FontSize = textFontSize;
         }
 
         private void exportButton_Click(object sender, RoutedEventArgs e)
