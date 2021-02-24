@@ -1,8 +1,10 @@
 ﻿using Microsoft.Win32;
 using System;
+using System.Drawing;
 using System.IO;
 using System.Windows;
 using System.Windows.Media;
+using FontFamily = System.Windows.Media.FontFamily;
 
 namespace Infinity_Notes
 {
@@ -15,8 +17,7 @@ namespace Infinity_Notes
 
         private void MainWindow_Loaded(object sender, RoutedEventArgs e)
         {
-            string textFontSizeString = Properties.Settings.Default.textFontSize;
-            int textFontSize = (int)Convert.ToDouble(textFontSizeString);
+            double textFontSize = Properties.Settings.Default.textFontSize;
 
             mainInput.FontSize = textFontSize;
         }

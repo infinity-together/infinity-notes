@@ -25,10 +25,10 @@ namespace Infinity_Notes.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string textFontSize {
+        [global::System.Configuration.DefaultSettingValueAttribute("14")]
+        public double textFontSize {
             get {
-                return ((string)(this["textFontSize"]));
+                return ((double)(this["textFontSize"]));
             }
             set {
                 this["textFontSize"] = value;

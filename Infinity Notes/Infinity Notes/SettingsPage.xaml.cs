@@ -20,13 +20,13 @@ namespace Infinity_Notes
 
         public void GetSettings()
         {
-            textSizeSettingsInput.Text = Properties.Settings.Default.textFontSize;
+            textSizeSettingsInput.Text = Properties.Settings.Default.textFontSize.ToString();
             fontsSettingsChose.SelectedIndex = Properties.Settings.Default.textFont;
         }
 
         public void SaveSettings()
         {
-            Properties.Settings.Default.textFontSize = textSizeSettingsInput.Text;
+            Properties.Settings.Default.textFontSize = double.Parse(textSizeSettingsInput.Text);
             Properties.Settings.Default.textFont = fontsSettingsChose.SelectedIndex;
 
             Properties.Settings.Default.Save();

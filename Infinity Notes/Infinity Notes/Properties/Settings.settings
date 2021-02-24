@@ -2,8 +2,8 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Infinity_Notes.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
-    <Setting Name="textFontSize" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+    <Setting Name="textFontSize" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">14</Value>
     </Setting>
     <Setting Name="textFont" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">0</Value>
