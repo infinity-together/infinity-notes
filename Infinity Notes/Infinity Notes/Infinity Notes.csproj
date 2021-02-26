@@ -6,7 +6,7 @@
     <RootNamespace>Infinity_Notes</RootNamespace>
     <UseWPF>true</UseWPF>
     <ApplicationIcon>App-Icon.ico</ApplicationIcon>
-    <Version>0.2.2</Version>
+    <Version>0.3.0</Version>
     <Authors>Infinity Together Inc.</Authors>
   </PropertyGroup>
 
@@ -29,7 +29,6 @@
     <None Remove="Fonts\NotoSans-Italic.ttf" />
     <None Remove="Fonts\NotoSans-Regular.ttf" />
     <None Remove="Fonts\Raleway-Bold.ttf" />
-    <None Remove="Fonts\Raleway-BoldItalic.ttf" />
     <None Remove="Fonts\Raleway-Italic.ttf" />
     <None Remove="Fonts\Raleway-Regular.ttf" />
   </ItemGroup>
@@ -92,9 +91,6 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Fonts\Raleway-Bold.ttf">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Fonts\Raleway-BoldItalic.ttf">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Fonts\Raleway-Italic.ttf">

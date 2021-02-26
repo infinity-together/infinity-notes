@@ -40,7 +40,6 @@
     <Resource Include="Fonts\Inter-Italic.ttf" />
     <Resource Include="Fonts\Inter-Regular.ttf" />
     <Resource Include="Fonts\Raleway-Bold.ttf" />
-    <Resource Include="Fonts\Raleway-BoldItalic.ttf" />
     <Resource Include="Fonts\Raleway-Italic.ttf" />
     <Resource Include="Fonts\Raleway-Regular.ttf" />
   </ItemGroup>

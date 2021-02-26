@@ -1,6 +1,5 @@
 ﻿using Microsoft.Win32;
 using System;
-using System.Drawing;
 using System.IO;
 using System.Windows;
 using System.Windows.Media;
@@ -20,6 +19,31 @@ namespace Infinity_Notes
             double textFontSize = Properties.Settings.Default.textFontSize;
 
             mainInput.FontSize = textFontSize;
+
+            if (Properties.Settings.Default.textFont == 1)
+            {
+                mainInput.FontFamily = new FontFamily("Segoe UI");
+            }
+            else if (Properties.Settings.Default.textFont == 2)
+            {
+                mainInput.FontFamily = new FontFamily(new Uri(AppDomain.CurrentDomain.BaseDirectory + "/Fonts/#" + "Cascadia Code", UriKind.Absolute), "Cascadia Code"); 
+            }
+            else if (Properties.Settings.Default.textFont == 3)
+            {
+                mainInput.FontFamily = new FontFamily(new Uri(AppDomain.CurrentDomain.BaseDirectory + "/Fonts/#" + "Courier New", UriKind.Absolute), "Courier New"); 
+            }
+            else if (Properties.Settings.Default.textFont == 4)
+            {
+                mainInput.FontFamily = new FontFamily(new Uri(AppDomain.CurrentDomain.BaseDirectory + "/Fonts/#" + "Georgia", UriKind.Absolute), "Georgia"); 
+            }
+
+            if (Properties.Settings.Default.colorTheme == 1) // Dark Theme
+            {
+                mainInput.Background = (SolidColorBrush)new BrushConverter().ConvertFromString("#2e2e2e");
+                mainInput.Foreground = (SolidColorBrush)new BrushConverter().ConvertFromString("#fafafa");
+
+                mainFrame.Background = (SolidColorBrush)new BrushConverter().ConvertFromString("#2e2e2e");
+            }
         }
 
         private void exportButton_Click(object sender, RoutedEventArgs e)
