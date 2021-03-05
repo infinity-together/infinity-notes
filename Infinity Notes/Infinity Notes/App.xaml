@@ -13,9 +13,6 @@
             </ResourceDictionary.MergedDictionaries>
 
             <FontFamily x:Key="NotoSans">pack://application:,,,/Fonts/#Noto Sans</FontFamily>
-            <FontFamily x:Key="CascadiaCode">pack://application:,,,/Fonts/#Cascadia Code</FontFamily>
-            <FontFamily x:Key="CourierNew">pack://application:,,,/Fonts/#Courier New</FontFamily>
-            <FontFamily x:Key="Georgia">pack://application:,,,/Fonts/#Georgia</FontFamily>
             <FontFamily x:Key="Inter">pack://application:,,,/Fonts/#Inter</FontFamily>
             <FontFamily x:Key="Raleway">pack://application:,,,/Fonts/#Raleway</FontFamily>
         </ResourceDictionary>

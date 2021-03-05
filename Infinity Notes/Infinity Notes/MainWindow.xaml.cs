@@ -1,49 +1,27 @@
 ﻿using Microsoft.Win32;
-using System;
 using System.IO;
 using System.Windows;
-using System.Windows.Media;
-using FontFamily = System.Windows.Media.FontFamily;
 
 namespace Infinity_Notes
 {
     public partial class MainWindow : Window
     {
+        public static MainWindow Components { get; private set; }
+
+        bool settingsButtonFirstClick = true;
+
         public MainWindow()
         {
             InitializeComponent();
+            Components = this;
         }
 
         private void MainWindow_Loaded(object sender, RoutedEventArgs e)
         {
-            double textFontSize = Properties.Settings.Default.textFontSize;
-
-            mainInput.FontSize = textFontSize;
-
-            if (Properties.Settings.Default.textFont == 1)
-            {
-                mainInput.FontFamily = new FontFamily("Segoe UI");
-            }
-            else if (Properties.Settings.Default.textFont == 2)
-            {
-                mainInput.FontFamily = new FontFamily(new Uri(AppDomain.CurrentDomain.BaseDirectory + "/Fonts/#" + "Cascadia Code", UriKind.Absolute), "Cascadia Code"); 
-            }
-            else if (Properties.Settings.Default.textFont == 3)
-            {
-                mainInput.FontFamily = new FontFamily(new Uri(AppDomain.CurrentDomain.BaseDirectory + "/Fonts/#" + "Courier New", UriKind.Absolute), "Courier New"); 
-            }
-            else if (Properties.Settings.Default.textFont == 4)
-            {
-                mainInput.FontFamily = new FontFamily(new Uri(AppDomain.CurrentDomain.BaseDirectory + "/Fonts/#" + "Georgia", UriKind.Absolute), "Georgia"); 
-            }
-
-            if (Properties.Settings.Default.colorTheme == 1) // Dark Theme
-            {
-                mainInput.Background = (SolidColorBrush)new BrushConverter().ConvertFromString("#2e2e2e");
-                mainInput.Foreground = (SolidColorBrush)new BrushConverter().ConvertFromString("#fafafa");
-
-                mainFrame.Background = (SolidColorBrush)new BrushConverter().ConvertFromString("#2e2e2e");
-            }
+            ComponentsLoad.TextFontSizeLoad();
+            ComponentsLoad.TextFontLoad();
+            ComponentsLoad.DarkThemeLoad();
+            ComponentsLoad.TextWrappingLoad();
         }
 
         private void exportButton_Click(object sender, RoutedEventArgs e)
@@ -76,15 +54,19 @@ namespace Infinity_Notes
             }
         }
 
-        bool settingsButtonFirstClick = true;
+        
 
-        private void settingsButton_Click(object sender, RoutedEventArgs e)
+        private void SettingsButton_Click(object sender, RoutedEventArgs e)
         {
             if (settingsButtonFirstClick == true)
             {
                 mainFrame.Content = new SettingsPage();
                 mainInput.Visibility = Visibility.Hidden; 
                 mainInput.IsEnabled = false;
+                searchInput.Visibility = Visibility.Hidden;
+                searchInput.IsEnabled = false;
+                fileMenu.Visibility = Visibility.Hidden;
+                fileMenu.IsEnabled = false;
                 settingsButtonFirstClick = false;
             }
             else
@@ -92,6 +74,10 @@ namespace Infinity_Notes
                 mainFrame.NavigationService.Navigate(null);
                 mainInput.Visibility = Visibility.Visible;
                 mainInput.IsEnabled = true;
+                searchInput.Visibility = Visibility.Visible;
+                searchInput.IsEnabled = true;
+                fileMenu.Visibility = Visibility.Visible;
+                fileMenu.IsEnabled = true;
                 settingsButtonFirstClick = true;
             }
         }

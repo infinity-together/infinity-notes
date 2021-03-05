@@ -6,21 +6,12 @@
     <RootNamespace>Infinity_Notes</RootNamespace>
     <UseWPF>true</UseWPF>
     <ApplicationIcon>App-Icon.ico</ApplicationIcon>
-    <Version>0.3.0</Version>
+    <Version>0.3.1</Version>
     <Authors>Infinity Together Inc.</Authors>
   </PropertyGroup>
 
   <ItemGroup>
     <None Remove="add.png" />
-    <None Remove="Fonts\CascadiaCode.ttf" />
-    <None Remove="Fonts\CourierNew-Bold.ttf" />
-    <None Remove="Fonts\CourierNew-BoldItalic.ttf" />
-    <None Remove="Fonts\CourierNew-Italic.ttf" />
-    <None Remove="Fonts\CourierNew-Regular.ttf" />
-    <None Remove="Fonts\Georgia-Bold.ttf" />
-    <None Remove="Fonts\Georgia-BoldItalic.ttf" />
-    <None Remove="Fonts\Georgia-Italic.ttf" />
-    <None Remove="Fonts\Georgia-Regular.ttf" />
     <None Remove="Fonts\Inter-Bold.ttf" />
     <None Remove="Fonts\Inter-BoldItalic.ttf" />
     <None Remove="Fonts\Inter-Italic.ttf" />
@@ -39,33 +30,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Fonts\CascadiaCode.ttf">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Fonts\CourierNew-Bold.ttf">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Fonts\CourierNew-BoldItalic.ttf">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Fonts\CourierNew-Italic.ttf">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Fonts\CourierNew-Regular.ttf">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Fonts\Georgia-Bold.ttf">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Fonts\Georgia-BoldItalic.ttf">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Fonts\Georgia-Italic.ttf">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Fonts\Georgia-Regular.ttf">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
     <Resource Include="Fonts\Inter-Bold.ttf">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>

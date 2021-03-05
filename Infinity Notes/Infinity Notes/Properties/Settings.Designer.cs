@@ -58,5 +58,29 @@ namespace Infinity_Notes.Properties {
                 this["colorTheme"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int textWrapping {
+            get {
+                return ((int)(this["textWrapping"]));
+            }
+            set {
+                this["textWrapping"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int animationsWork {
+            get {
+                return ((int)(this["animationsWork"]));
+            }
+            set {
+                this["animationsWork"] = value;
+            }
+        }
     }
 }
