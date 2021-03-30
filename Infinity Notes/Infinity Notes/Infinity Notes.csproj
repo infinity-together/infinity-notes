@@ -6,8 +6,12 @@
     <RootNamespace>Infinity_Notes</RootNamespace>
     <UseWPF>true</UseWPF>
     <ApplicationIcon>App-Icon.ico</ApplicationIcon>
-    <Version>0.3.1</Version>
+    <Version>0.3.4</Version>
     <Authors>Infinity Together Inc.</Authors>
+    <Description>A simple note app</Description>
+	  <PublishSingleFile>true</PublishSingleFile>
+	  <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+	  <PublishTrimmed>true</PublishTrimmed>
   </PropertyGroup>
 
   <ItemGroup>
@@ -19,9 +23,6 @@
     <None Remove="Fonts\NotoSans-BoldItalic.ttf" />
     <None Remove="Fonts\NotoSans-Italic.ttf" />
     <None Remove="Fonts\NotoSans-Regular.ttf" />
-    <None Remove="Fonts\Raleway-Bold.ttf" />
-    <None Remove="Fonts\Raleway-Italic.ttf" />
-    <None Remove="Fonts\Raleway-Regular.ttf" />
   </ItemGroup>
 
   <ItemGroup>
@@ -52,15 +53,6 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Fonts\NotoSans-Regular.ttf">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Fonts\Raleway-Bold.ttf">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Fonts\Raleway-Italic.ttf">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Fonts\Raleway-Regular.ttf">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>

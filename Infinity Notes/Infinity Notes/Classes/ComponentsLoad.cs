@@ -38,12 +38,6 @@ namespace Infinity_Notes
                 case 4:
                     SetDefaultFont("Georgia");
                     break;
-                case 5:
-                    SetExternalFont("Inter");
-                    break;
-                case 6:
-                    SetExternalFont("Raleway");
-                    break;
             }
         }
 

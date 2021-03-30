@@ -7,7 +7,7 @@
       xmlns:local="clr-namespace:Infinity_Notes"
       xmlns:p="clr-namespace:Infinity_Notes.Properties"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="550" d:DesignWidth="800"
       Title="SettingsPage" Loaded="SettingsPage_Loaded">
 
     <Grid>
@@ -53,15 +53,26 @@
         </ComboBox>
 
         <TextBox x:Name="searchInput" HorizontalAlignment="Left" Margin="10,70,0,0" Style="{StaticResource MaterialDesignTextBox}" materialDesign:HintAssist.Hint="Search..." FontFamily="{StaticResource NotoSans}" TextWrapping="NoWrap" VerticalAlignment="Top" Width="200" FontSize="14"/>
-        
+
         <Label Content="Animations" FontSize="16" HorizontalAlignment="Left" Margin="6,348.7,0,0" VerticalAlignment="Top" FontFamily="{StaticResource NotoSans}"/>
-        
+
         <ComboBox x:Name="animationChose" HorizontalAlignment="Left" Margin="174,349,0,0" SelectedIndex="0"  VerticalAlignment="Top" Width="36" Height="25">
             <ComboBoxItem Content="No"/>
             <ComboBoxItem Content="Yes"/>
         </ComboBox>
 
 
-
+        <Label Content="Security" HorizontalAlignment="Left" FontWeight="Bold" FontSize="16" Margin="6,388,0,0" VerticalAlignment="Top" FontFamily="{StaticResource NotoSans}"/>
+        <Label Content="Password" FontSize="16" HorizontalAlignment="Left" Margin="6,428,0,0" VerticalAlignment="Top" FontFamily="{StaticResource NotoSans}"/>
+        <PasswordBox x:Name="accountPasswordInput" HorizontalAlignment="Left" Margin="110,428,0,0" VerticalAlignment="Top" Width="100" FontFamily="{StaticResource NotoSans}" KeyUp="accountPasswordInput_KeyUp" LostFocus="accountPasswordInput_LostFocus"/>
+        <Label Content="Password Check" FontSize="16" HorizontalAlignment="Left" Margin="6,468,0,0" VerticalAlignment="Top" FontFamily="{StaticResource NotoSans}"/>
+        <ComboBox x:Name="passwordCheckChose" HorizontalAlignment="Left" Margin="174,468,0,0" SelectedIndex="0"  VerticalAlignment="Top" Width="36" Height="25">
+            <ComboBoxItem Content="No"/>
+            <ComboBoxItem Content="Yes"/>
+        </ComboBox>
+        
+        <Label x:Name="badPasswordLabel" Content="Bad password" Visibility="Hidden" Foreground="#ed0505" FontFamily="{StaticResource NotoSans}"  HorizontalAlignment="Left" Margin="220,432,0,0" VerticalAlignment="Top" FontSize="12"/>
+        <Label x:Name="notBadPasswordLabel" Content="Not bad password" Visibility="Hidden" Foreground="#e7eb17" FontFamily="{StaticResource NotoSans}"  HorizontalAlignment="Left" Margin="220,432,0,0" VerticalAlignment="Top" FontSize="12"/>
+        <Label x:Name="goodPasswordLabel" Content="Good password" Visibility="Hidden" Foreground="#41db1a" FontFamily="{StaticResource NotoSans}"  HorizontalAlignment="Left" Margin="220,432,0,0" VerticalAlignment="Top" FontSize="12"/>
     </Grid>
 </Page>

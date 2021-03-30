@@ -82,5 +82,29 @@ namespace Infinity_Notes.Properties {
                 this["animationsWork"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public string accountPassword {
+            get {
+                return ((string)(this["accountPassword"]));
+            }
+            set {
+                this["accountPassword"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int passwordCheck {
+            get {
+                return ((int)(this["passwordCheck"]));
+            }
+            set {
+                this["passwordCheck"] = value;
+            }
+        }
     }
 }

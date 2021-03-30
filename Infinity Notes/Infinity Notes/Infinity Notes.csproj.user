@@ -9,12 +9,18 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="PasswordWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="SettingsPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="PasswordWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="SettingsPage.xaml">
@@ -30,8 +36,5 @@
     <Resource Include="Fonts\Inter-BoldItalic.ttf" />
     <Resource Include="Fonts\Inter-Italic.ttf" />
     <Resource Include="Fonts\Inter-Regular.ttf" />
-    <Resource Include="Fonts\Raleway-Bold.ttf" />
-    <Resource Include="Fonts\Raleway-Italic.ttf" />
-    <Resource Include="Fonts\Raleway-Regular.ttf" />
   </ItemGroup>
 </Project>

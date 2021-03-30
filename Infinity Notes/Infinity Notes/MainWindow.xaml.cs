@@ -14,6 +14,8 @@ namespace Infinity_Notes
         {
             InitializeComponent();
             Components = this;
+
+            AnimationsLoad.LoadAnimations();
         }
 
         private void MainWindow_Loaded(object sender, RoutedEventArgs e)
@@ -54,30 +56,24 @@ namespace Infinity_Notes
             }
         }
 
-        
-
         private void SettingsButton_Click(object sender, RoutedEventArgs e)
         {
             if (settingsButtonFirstClick == true)
             {
                 mainFrame.Content = new SettingsPage();
                 mainInput.Visibility = Visibility.Hidden; 
-                mainInput.IsEnabled = false;
                 searchInput.Visibility = Visibility.Hidden;
-                searchInput.IsEnabled = false;
                 fileMenu.Visibility = Visibility.Hidden;
-                fileMenu.IsEnabled = false;
+                editMenu.Visibility = Visibility.Hidden;
                 settingsButtonFirstClick = false;
             }
             else
             {
                 mainFrame.NavigationService.Navigate(null);
                 mainInput.Visibility = Visibility.Visible;
-                mainInput.IsEnabled = true;
                 searchInput.Visibility = Visibility.Visible;
-                searchInput.IsEnabled = true;
                 fileMenu.Visibility = Visibility.Visible;
-                fileMenu.IsEnabled = true;
+                editMenu.Visibility = Visibility.Visible;
                 settingsButtonFirstClick = true;
             }
         }
