@@ -2,12 +2,14 @@
 using System.Windows.Controls;
 using System.Windows.Media.Animation;
 using System;
-using System.Windows.Media;
+using System.Windows.Input;
 
 namespace Infinity_Notes
 {
     public partial class SettingsPage : Page
     {
+        public static SettingsPage Components { get; private set; }
+
         public SettingsPage()
         {
             InitializeComponent();
@@ -63,7 +65,7 @@ namespace Infinity_Notes
             searchInputAnim.From = 50;
             searchInputAnim.To = 200;
             searchInputAnim.Duration = TimeSpan.FromSeconds(0.6);
-            searchInput.BeginAnimation(Button.WidthProperty, searchInputAnim);
+            searchInput.BeginAnimation(WidthProperty, searchInputAnim);
         }
 
         void PasswordSecurityCheck()
@@ -95,7 +97,7 @@ namespace Infinity_Notes
             goodPasswordLabel.Visibility = Visibility.Hidden;
         }
 
-        private void accountPasswordInput_KeyUp(object sender, System.Windows.Input.KeyEventArgs e)
+        private void accountPasswordInput_KeyUp(object sender, KeyEventArgs e)
         {
             PasswordSecurityCheck();
         }

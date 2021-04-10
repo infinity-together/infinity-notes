@@ -3,9 +3,6 @@ using System.Windows.Controls;
 
 namespace Infinity_Notes
 {
-    /// <summary>
-    /// Логика взаимодействия для PasswordWindow.xaml
-    /// </summary>
     public partial class PasswordWindow : Window
     {
         public PasswordWindow()

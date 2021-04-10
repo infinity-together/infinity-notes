@@ -6,7 +6,7 @@
     <RootNamespace>Infinity_Notes</RootNamespace>
     <UseWPF>true</UseWPF>
     <ApplicationIcon>App-Icon.ico</ApplicationIcon>
-    <Version>0.3.4</Version>
+    <Version>0.4.2</Version>
     <Authors>Infinity Together Inc.</Authors>
     <Description>A simple note app</Description>
 	  <PublishSingleFile>true</PublishSingleFile>

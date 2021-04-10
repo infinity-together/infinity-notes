@@ -9,13 +9,12 @@ namespace Infinity_Notes
         public static MainWindow Components { get; private set; }
 
         bool settingsButtonFirstClick = true;
+        string fileDialogFilter = "All Files (*.*)|*.*|Inote Files (*.inote)|*.inote|TXT Files (*.txt)|*.txt|RTF Files (*.rtf)|*.rtf";
 
         public MainWindow()
         {
             InitializeComponent();
             Components = this;
-
-            AnimationsLoad.LoadAnimations();
         }
 
         private void MainWindow_Loaded(object sender, RoutedEventArgs e)
@@ -29,7 +28,7 @@ namespace Infinity_Notes
         private void exportButton_Click(object sender, RoutedEventArgs e)
         {
             SaveFileDialog saveFileDialog = new SaveFileDialog();
-            saveFileDialog.Filter = "All Files (*.*)|*.*|Inote Files (*.inote)|*.inote|TXT Files (*.txt)|*.txt|RTF Files (*.rtf)|*.rtf";
+            saveFileDialog.Filter = fileDialogFilter;
             saveFileDialog.FilterIndex = 2;  
             saveFileDialog.Title = "Export";
             saveFileDialog.FileName = "Note";
@@ -44,7 +43,7 @@ namespace Infinity_Notes
         private void openButton_Click(object sender, RoutedEventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.Filter = "All Files (*.*)|*.*|Inote Files (*.inote)|*.inote|TXT Files (*.txt)|*.txt|RTF Files (*.rtf)|*.rtf";
+            openFileDialog.Filter = fileDialogFilter;
             openFileDialog.FilterIndex = 2;
             openFileDialog.Title = "Open";
             openFileDialog.RestoreDirectory = true;
@@ -61,19 +60,15 @@ namespace Infinity_Notes
             if (settingsButtonFirstClick == true)
             {
                 mainFrame.Content = new SettingsPage();
-                mainInput.Visibility = Visibility.Hidden; 
-                searchInput.Visibility = Visibility.Hidden;
-                fileMenu.Visibility = Visibility.Hidden;
-                editMenu.Visibility = Visibility.Hidden;
+                mainInput.Visibility = Visibility.Hidden;
+                mainMenu.Visibility = Visibility.Hidden;
                 settingsButtonFirstClick = false;
             }
             else
             {
                 mainFrame.NavigationService.Navigate(null);
                 mainInput.Visibility = Visibility.Visible;
-                searchInput.Visibility = Visibility.Visible;
-                fileMenu.Visibility = Visibility.Visible;
-                editMenu.Visibility = Visibility.Visible;
+                mainMenu.Visibility = Visibility.Visible;
                 settingsButtonFirstClick = true;
             }
         }

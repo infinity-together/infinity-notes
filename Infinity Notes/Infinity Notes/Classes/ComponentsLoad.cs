@@ -19,11 +19,6 @@ namespace Infinity_Notes
                 MainWindow.Components.mainInput.FontFamily = new FontFamily(fontName);
             }
 
-            void SetExternalFont(string fontName)
-            {
-                MainWindow.Components.mainInput.FontFamily = new FontFamily(new Uri(AppDomain.CurrentDomain.BaseDirectory + "/Fonts/#" + fontName, UriKind.Absolute), fontName);
-            }
-
             switch (Properties.Settings.Default.textFont)
             {
                 case 1:
