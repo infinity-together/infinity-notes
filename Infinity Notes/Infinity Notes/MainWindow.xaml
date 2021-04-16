@@ -6,7 +6,8 @@
         mc:Ignorable="d"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         WindowStartupLocation="CenterScreen"
-        Title="Infinity Notes"  Width="1280" Height="720">
+        Title="Infinity Notes"  Width="1280" Height="720" WindowStyle="SingleBorderWindow" Closed="MainWindow_Closed">
+    
     <Grid x:Name="mainGrid" Loaded="MainWindow_Loaded">
         <Grid.RowDefinitions>
             <RowDefinition />
@@ -30,15 +31,15 @@
         </Grid>
 
         <Frame x:Name="mainFrame" NavigationUIVisibility="Hidden" Grid.Column="1" Grid.RowSpan="2"/>
-        <TextBox x:Name="mainInput" Grid.Column="1" TextWrapping="NoWrap" Margin="10,10,10,0" Grid.Row="1" Style="{StaticResource MaterialDesignTextBox}" FontFamily="{StaticResource NotoSans}" AcceptsReturn="True" FontSize="14" AcceptsTab="True" AutoWordSelection="True" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" Cursor="IBeam"/>
+        <RichTextBox x:Name="mainInput" Grid.Column="1" Block.LineHeight="1" Margin="10,10,10,0" Grid.Row="1" Style="{StaticResource MaterialDesignRichTextBox}" FontFamily="{StaticResource NotoSans}" AcceptsReturn="True" FontSize="14" AcceptsTab="True" AutoWordSelection="True" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" Cursor="IBeam"/>
 
-        <Menu x:Name="mainMenu" Style="{DynamicResource MaterialDesignMenu}" Grid.Column="1" Margin="10,10,0,0" Background="#FFFFFF" Height="25" VerticalAlignment="Top" HorizontalAlignment="Left" Width="200">
-            <MenuItem x:Name="fileMenu" Header="File" FontFamily="{StaticResource NotoSans}" Height="25" FontSize="15" Width="80" HorizontalAlignment="Stretch">
+        <Menu x:Name="mainMenu" Style="{DynamicResource MaterialDesignMenu}" Grid.Column="1" Margin="10,10,0,0" Background="#FFFFFF" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="200">
+            <MenuItem x:Name="fileMenu" Header="File" FontFamily="{StaticResource NotoSans}" Height="30" FontSize="15" Width="80" HorizontalAlignment="Stretch">
                 <MenuItem x:Name="fileMenuExport" Header="Export" FontFamily="{StaticResource NotoSans}" Click="exportButton_Click"/>
                 <MenuItem x:Name="fileMenuOpen" Header="Open" FontFamily="{StaticResource NotoSans}" Click="openButton_Click"/>
             </MenuItem>
 
-            <MenuItem x:Name="editMenu" Header="Edit" FontFamily="{StaticResource NotoSans}" Height="25" FontSize="15" Width="85">
+            <MenuItem x:Name="editMenu" Header="Edit" FontFamily="{StaticResource NotoSans}" Height="30" FontSize="15" Width="85">
                 <MenuItem Header="Copy" FontFamily="{StaticResource NotoSans}" Command="ApplicationCommands.Copy"/>
                 <MenuItem Header="Cut" FontFamily="{StaticResource NotoSans}" Command="ApplicationCommands.Cut"/>
                 <MenuItem Header="Paste" FontFamily="{StaticResource NotoSans}" Command="ApplicationCommands.Paste"/>

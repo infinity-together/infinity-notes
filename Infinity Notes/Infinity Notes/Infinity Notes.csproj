@@ -6,17 +6,17 @@
     <RootNamespace>Infinity_Notes</RootNamespace>
     <UseWPF>true</UseWPF>
     <ApplicationIcon>App-Icon.ico</ApplicationIcon>
-    <Version>0.4.2</Version>
+    <Version>0.4.3</Version>
     <Authors>Infinity Together Inc.</Authors>
     <Description>A simple note app</Description>
 	  <PublishSingleFile>true</PublishSingleFile>
 	  <RuntimeIdentifier>win-x64</RuntimeIdentifier>
 	  <PublishTrimmed>true</PublishTrimmed>
+	  <Company>Infinity Together Inc.</Company>
   </PropertyGroup>
 
   <ItemGroup>
     <None Remove="add.png" />
-    <None Remove="Fonts\Inter-Bold.ttf" />
     <None Remove="Fonts\Inter-BoldItalic.ttf" />
     <None Remove="Fonts\Inter-Italic.ttf" />
     <None Remove="Fonts\Inter-Regular.ttf" />
@@ -31,9 +31,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Fonts\Inter-Bold.ttf">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
     <Resource Include="Fonts\Inter-BoldItalic.ttf">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
@@ -66,6 +63,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="Fonts\Inter-Bold.ttf">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
     <None Update="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

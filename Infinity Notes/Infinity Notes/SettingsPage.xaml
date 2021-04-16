@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
       mc:Ignorable="d" 
-      d:DesignHeight="550" d:DesignWidth="800"
+      d:DesignHeight="650" d:DesignWidth="800"
       Title="SettingsPage" Loaded="SettingsPage_Loaded">
 
     <Grid>
@@ -13,53 +13,58 @@
         <TextBox x:Name="searchInput" HorizontalAlignment="Left" FontSize="14" FontFamily="{StaticResource NotoSans}" Margin="10,70,0,0" Style="{StaticResource MaterialDesignTextBox}" materialDesign:HintAssist.Hint="Search..." TextWrapping="NoWrap" VerticalAlignment="Top" Width="200" />
 
         <Label Content="Text"  HorizontalAlignment="Left" FontWeight="Bold" FontSize="16" Margin="6,108,0,0" VerticalAlignment="Top" FontFamily="{StaticResource NotoSans}"/>
-            <Label Content="Font Size" FontSize="16" HorizontalAlignment="Left" Margin="6,148,0,0" VerticalAlignment="Top" FontFamily="{StaticResource NotoSans}"/>
-            <TextBox x:Name="textSizeSettingsInput" Text="14" Width="25" FontFamily="{StaticResource NotoSans}" HorizontalAlignment="Left" Margin="185,148,0,0" TextWrapping="NoWrap" VerticalAlignment="Top"/>
+        <Label Content="Font Size" FontSize="16" HorizontalAlignment="Left" Margin="6,148,0,0" VerticalAlignment="Top" FontFamily="{StaticResource NotoSans}"/>
+        <TextBox x:Name="textSizeSettingsInput" Text="14" Width="25" FontFamily="{StaticResource NotoSans}" HorizontalAlignment="Left" Margin="185,148,0,0" TextWrapping="NoWrap" VerticalAlignment="Top"/>
 
-            <Label Content="Font" FontSize="16" FontFamily="{StaticResource NotoSans}" HorizontalAlignment="Left" Margin="6,188,0,0" VerticalAlignment="Top" />
-            <ComboBox x:Name="fontsSettingsChose" SelectedIndex="0" HorizontalAlignment="Left" Margin="110,188,0,0" VerticalAlignment="Top" Width="100" Height="25" FontFamily="{StaticResource NotoSans}">
-                <ComboBoxItem Content="Noto Sans" />
-                <ComboBoxItem Content="Segoe UI" />
-                <ComboBoxItem Content="Cascadia Code" />
-                <ComboBoxItem Content="Courier New" />
-                <ComboBoxItem Content="Georgia" />
+        <Label Content="Font" FontSize="16" FontFamily="{StaticResource NotoSans}" HorizontalAlignment="Left" Margin="6,188,0,0" VerticalAlignment="Top" />
+        <ComboBox x:Name="fontsSettingsChose" SelectedIndex="0" HorizontalAlignment="Left" Margin="110,188,0,0" VerticalAlignment="Top" Width="100" Height="25" FontFamily="{StaticResource NotoSans}">
+            <ComboBoxItem Content="Noto Sans" />
+            <ComboBoxItem Content="Segoe UI" />
+            <ComboBoxItem Content="Cascadia Code" />
+            <ComboBoxItem Content="Courier New" />
+            <ComboBoxItem Content="Georgia" />
             <ComboBoxItem Content="Inter" IsEnabled="False" />
-            </ComboBox>
+        </ComboBox>
 
-            <Label Content="Text Wrapping" FontSize="16" FontFamily="{StaticResource NotoSans}" HorizontalAlignment="Left" Margin="6,228,0,0" VerticalAlignment="Top"/>
-            <ComboBox x:Name="textWrappingChose" HorizontalAlignment="Left" Margin="175,228,0,0" SelectedIndex="1"  VerticalAlignment="Top" Width="35" Height="25">
-                <ComboBoxItem Content="No"></ComboBoxItem>
-                <ComboBoxItem Content="Yes"></ComboBoxItem>
-            </ComboBox>
+        <Label Content="Appearance" FontFamily="{StaticResource NotoSans}" HorizontalAlignment="Left" FontWeight="Bold" FontSize="16" Margin="6,224,0,0" VerticalAlignment="Top" />
+        <Label Content="Theme" FontSize="16" FontFamily="{StaticResource NotoSans}" HorizontalAlignment="Left" Margin="6,264,0,0" VerticalAlignment="Top" />
+        <ComboBox x:Name="colorThemeChose" FontFamily="{StaticResource NotoSans}" HorizontalAlignment="Left" SelectedIndex="0" Margin="110,264,0,0" VerticalAlignment="Top" Width="100" Height="25">
+            <ComboBoxItem Content="Light" />
+            <ComboBoxItem Content="Dark" IsEnabled="False" />
+        </ComboBox>
+
+        <Label Content="Language" FontSize="16" FontFamily="{StaticResource NotoSans}" HorizontalAlignment="Left" Margin="6,304,0,0" VerticalAlignment="Top" />
+        <ComboBox x:Name="languageChose" FontFamily="{StaticResource NotoSans}" HorizontalAlignment="Left" Margin="174,304,0,0" SelectedIndex="0" Width="36" Height="24" VerticalAlignment="Top">
+            <ComboBoxItem Content="En"/>
+            <ComboBoxItem Content="Ru"/>
+        </ComboBox>
+
+        <Label Content="Animations" FontSize="16" FontFamily="{StaticResource NotoSans}" HorizontalAlignment="Left" Margin="6,344,0,0" VerticalAlignment="Top" />
+        <ComboBox x:Name="animationChose" FontFamily="{StaticResource NotoSans}" HorizontalAlignment="Left" Margin="174,344,0,0" SelectedIndex="0" Width="36" Height="24" VerticalAlignment="Top">
+            <ComboBoxItem Content="No"/>
+            <ComboBoxItem Content="Yes"/>
+        </ComboBox>
 
 
-        <Label Content="Appearance" FontFamily="{StaticResource NotoSans}" HorizontalAlignment="Left" FontWeight="Bold" FontSize="16" Margin="6,268,0,0" VerticalAlignment="Top" />
-            <Label Content="Theme" FontSize="16" FontFamily="{StaticResource NotoSans}" HorizontalAlignment="Left" Margin="6,308,0,0" VerticalAlignment="Top" />
-            <ComboBox x:Name="colorThemeChose" FontFamily="{StaticResource NotoSans}" HorizontalAlignment="Left" SelectedIndex="0" Margin="110,308,0,0" VerticalAlignment="Top" Width="100" Height="25">
-                <ComboBoxItem Content="Light" />
-                <ComboBoxItem Content="Dark" IsEnabled="False" />
-            </ComboBox>
+        <Label Content="Security" HorizontalAlignment="Left" FontWeight="Bold" FontSize="16" Margin="6,384,0,0" VerticalAlignment="Top" FontFamily="{StaticResource NotoSans}"/>
+        <Label Content="Password" FontSize="16" HorizontalAlignment="Left" Margin="6,424,0,0" VerticalAlignment="Top" FontFamily="{StaticResource NotoSans}"/>
+        <PasswordBox x:Name="accountPasswordInput" HorizontalAlignment="Left" Margin="110,424,0,0" VerticalAlignment="Top" Width="100" FontFamily="{StaticResource NotoSans}" KeyUp="accountPasswordInput_KeyUp" LostFocus="accountPasswordInput_LostFocus" Height="24"/>
 
-            <Label Content="Animations" FontSize="16" FontFamily="{StaticResource NotoSans}" HorizontalAlignment="Left" Margin="6,348.7,0,0" VerticalAlignment="Top" />
-            <ComboBox x:Name="animationChose" FontFamily="{StaticResource NotoSans}" HorizontalAlignment="Left" Margin="174,349,0,0" SelectedIndex="0"  VerticalAlignment="Top" Width="36" Height="25">
-                <ComboBoxItem Content="No"/>
-                <ComboBoxItem Content="Yes"/>
-            </ComboBox>
+        <Label Content="Password Check" FontSize="16" FontFamily="{StaticResource NotoSans}" HorizontalAlignment="Left" Margin="6,464,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="passwordCheckChose" HorizontalAlignment="Left" Margin="174,464,0,0" SelectedIndex="0"  VerticalAlignment="Top" Width="36" Height="26">
+            <ComboBoxItem Content="No"/>
+            <ComboBoxItem Content="Yes"/>
+        </ComboBox>
 
+        <Label x:Name="badPasswordLabel" Content="Bad password" Visibility="Hidden" Foreground="#ed0505" FontFamily="{StaticResource NotoSans}"  HorizontalAlignment="Left" Margin="220,432,0,0" VerticalAlignment="Top" FontSize="12"/>
+        <Label x:Name="notBadPasswordLabel" Content="Not bad password" Visibility="Hidden" Foreground="#e7eb17" FontFamily="{StaticResource NotoSans}"  HorizontalAlignment="Left" Margin="220,432,0,0" VerticalAlignment="Top" FontSize="12"/>
+        <Label x:Name="goodPasswordLabel" Content="Good password" Visibility="Hidden" Foreground="#41db1a" FontFamily="{StaticResource NotoSans}"  HorizontalAlignment="Left" Margin="220,432,0,0" VerticalAlignment="Top" FontSize="12"/>
 
-        <Label Content="Security" HorizontalAlignment="Left" FontWeight="Bold" FontSize="16" Margin="6,388,0,0" VerticalAlignment="Top" FontFamily="{StaticResource NotoSans}"/>
-            <Label Content="Password" FontSize="16" HorizontalAlignment="Left" Margin="6,428,0,0" VerticalAlignment="Top" FontFamily="{StaticResource NotoSans}"/>
-            <PasswordBox x:Name="accountPasswordInput" HorizontalAlignment="Left" Margin="110,428,0,0" VerticalAlignment="Top" Width="100" FontFamily="{StaticResource NotoSans}" KeyUp="accountPasswordInput_KeyUp" LostFocus="accountPasswordInput_LostFocus"/>
-
-            <Label Content="Password Check" FontSize="16" FontFamily="{StaticResource NotoSans}" HorizontalAlignment="Left" Margin="6,468,0,0" VerticalAlignment="Top"/>
-            <ComboBox x:Name="passwordCheckChose" HorizontalAlignment="Left" Margin="174,468,0,0" SelectedIndex="0"  VerticalAlignment="Top" Width="36" Height="25">
-                <ComboBoxItem Content="No"/>
-                <ComboBoxItem Content="Yes"/>
-            </ComboBox>
-        
-            <Label x:Name="badPasswordLabel" Content="Bad password" Visibility="Hidden" Foreground="#ed0505" FontFamily="{StaticResource NotoSans}"  HorizontalAlignment="Left" Margin="220,432,0,0" VerticalAlignment="Top" FontSize="12"/>
-            <Label x:Name="notBadPasswordLabel" Content="Not bad password" Visibility="Hidden" Foreground="#e7eb17" FontFamily="{StaticResource NotoSans}"  HorizontalAlignment="Left" Margin="220,432,0,0" VerticalAlignment="Top" FontSize="12"/>
-            <Label x:Name="goodPasswordLabel" Content="Good password" Visibility="Hidden" Foreground="#41db1a" FontFamily="{StaticResource NotoSans}"  HorizontalAlignment="Left" Margin="220,432,0,0" VerticalAlignment="Top" FontSize="12"/>  
+        <TextBlock Margin="10,0,754,20" Text="About" Foreground="#A8A8A8" FontFamily="{StaticResource NotoSans}" TextWrapping="Wrap" Height="16" VerticalAlignment="Bottom" Cursor="Hand" MouseDown="TextBlock_MouseDown">
+            <TextBlock.TextDecorations>
+                <TextDecoration/>
+            </TextBlock.TextDecorations>
+        </TextBlock>
 
         <Button Content="Save" Click="settingSaveButton_Click" Style="{StaticResource MaterialDesignFlatButton}" FontFamily="{StaticResource NotoSans}" FontSize="16" Margin="0,0,10,10" HorizontalAlignment="Right" Width="100" Height="36" VerticalAlignment="Bottom"/>
     </Grid>

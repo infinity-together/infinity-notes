@@ -49,11 +49,11 @@ namespace Infinity_Notes
         {
             if (Properties.Settings.Default.textWrapping == 1)
             {
-                MainWindow.Components.mainInput.TextWrapping = TextWrapping.Wrap;
+                //MainWindow.Components.mainInput.TextWrapping = TextWrapping.Wrap;
             }
             else
             {
-                MainWindow.Components.mainInput.TextWrapping = TextWrapping.NoWrap;
+                //MainWindow.Components.mainInput.TextWrapping = TextWrapping.NoWrap;
             }
         }
     }

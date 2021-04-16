@@ -1,4 +1,6 @@
 ﻿using Microsoft.Win32;
+using System;
+using System.ComponentModel;
 using System.IO;
 using System.Windows;
 
@@ -25,6 +27,11 @@ namespace Infinity_Notes
             ComponentsLoad.TextWrappingLoad();
         }
 
+        private void MainWindow_Closed(object sender, EventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
+
         private void exportButton_Click(object sender, RoutedEventArgs e)
         {
             SaveFileDialog saveFileDialog = new SaveFileDialog();
@@ -36,8 +43,8 @@ namespace Infinity_Notes
 
             if (saveFileDialog.ShowDialog() == true)
             {
-                File.WriteAllText(saveFileDialog.FileName, mainInput.Text);
-            } 
+                File.WriteAllText(saveFileDialog.FileName, SettingsControl.mainInputText);
+            }
         }
 
         private void openButton_Click(object sender, RoutedEventArgs e)
@@ -51,7 +58,7 @@ namespace Infinity_Notes
             if (openFileDialog.ShowDialog() == true)
             {
                 string openedFileText = File.ReadAllText(openFileDialog.FileName);
-                mainInput.Text = openedFileText;
+                mainInput.Selection.Text = openedFileText;
             }
         }
 

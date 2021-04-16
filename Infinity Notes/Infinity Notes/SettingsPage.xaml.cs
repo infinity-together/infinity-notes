@@ -27,7 +27,6 @@ namespace Infinity_Notes
             textSizeSettingsInput.Text = Properties.Settings.Default.textFontSize.ToString();
             fontsSettingsChose.SelectedIndex = Properties.Settings.Default.textFont;
             colorThemeChose.SelectedIndex = Properties.Settings.Default.colorTheme;
-            textWrappingChose.SelectedIndex = Properties.Settings.Default.textWrapping;
             animationChose.SelectedIndex = Properties.Settings.Default.animationsWork;
             accountPasswordInput.Password = Properties.Settings.Default.accountPassword;
             passwordCheckChose.SelectedIndex = Properties.Settings.Default.passwordCheck;
@@ -38,7 +37,6 @@ namespace Infinity_Notes
             Properties.Settings.Default.textFontSize = double.Parse(textSizeSettingsInput.Text);
             Properties.Settings.Default.textFont = fontsSettingsChose.SelectedIndex;
             Properties.Settings.Default.colorTheme = colorThemeChose.SelectedIndex;
-            Properties.Settings.Default.textWrapping = textWrappingChose.SelectedIndex;
             Properties.Settings.Default.animationsWork = animationChose.SelectedIndex;
             Properties.Settings.Default.accountPassword = accountPasswordInput.Password;
             Properties.Settings.Default.passwordCheck = passwordCheckChose.SelectedIndex;
@@ -105,6 +103,12 @@ namespace Infinity_Notes
         private void accountPasswordInput_LostFocus(object sender, RoutedEventArgs e)
         {
             PasswordSecurityCheckHide();
+        }
+
+        private void TextBlock_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            AboutWindow aboutWindow = new AboutWindow();
+            aboutWindow.Show();
         }
     }
 }
